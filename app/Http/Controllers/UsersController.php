@@ -57,12 +57,10 @@ class UsersController extends Controller
     public function edit(Request $request, User $user)
     {
 
-        
-
         return Inertia::render('Users/UsersEdit', [
 
-            'user'     => $user,
-            
+            'user' => $user,
+
         ]);
 
     }
@@ -78,7 +76,7 @@ class UsersController extends Controller
     {
         $data = $request->validate([
             'name' => ['required'],
-            'email' => ['required','email']
+            'email' => ['required', 'email'],
         ]);
 
         $user->update($data);
