@@ -62,7 +62,6 @@ export default {
         };
     },
     mounted() {
-        console.log(this.users);
         this.historyIncrement(window.location.href);
         console.log("history", this.history);
     },
